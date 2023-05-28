@@ -1,8 +1,11 @@
 import React from 'react';
+// Styles
+import styled from "styled-components";
+import {StyledAbout} from "../styles";
 
 function FaqSection(props) {
     return (
-        <div className='faq'>
+        <StyledFaq>
             <h2>Shuttering Doubts <span>FAQs</span></h2>
             <div className='question'>
                 <h4>How do I book your photography or videography services?</h4>
@@ -13,6 +16,7 @@ function FaqSection(props) {
                         schedule, and the creative aspects of your project.
                     </p>
                 </div>
+                <div className='faq-line'></div>
             </div>
             <div className='question'>
                 <h4>What photography and videography equipment do you use?</h4>
@@ -23,6 +27,7 @@ function FaqSection(props) {
                         post-production software.
                     </p>
                 </div>
+                <div className='faq-line'></div>
             </div>
             <div className='question'>
                 <h4>Can I specify a particular style or theme for my photos or video?</h4>
@@ -33,6 +38,7 @@ function FaqSection(props) {
                         expectations.
                     </p>
                 </div>
+                <div className='faq-line'></div>
             </div>
             <div className='question'>
                 <h4>How soon can I expect to receive my photos or video after the shoot?</h4>
@@ -42,6 +48,7 @@ function FaqSection(props) {
                         our work. This allows you to promptly enjoy, share, or use your high-quality photos or videos.
                     </p>
                 </div>
+                <div className='faq-line'></div>
             </div>
             <div className='question'>
                 <h4>What is your cancellation and rescheduling policy?</h4>
@@ -52,9 +59,38 @@ function FaqSection(props) {
                         accommodate your needs while maintaining a productive schedule for our team.
                     </p>
                 </div>
+                <div className='faq-line'></div>
             </div>
-        </div>
+        </StyledFaq>
     );
 }
+
+const StyledFaq = styled(StyledAbout)`
+  display: block;
+  span{
+    display: block;
+  }
+  h2{
+    padding-bottom: 2rem;
+    font-weight: lighter;
+    }
+  .faq-line{
+      background: #cccccc;
+      height: 0.2rem;
+      margin: 2rem 0;
+      width: 100%;
+  .question{
+      padding: 3rem 0;
+      cursor: pointer;
+    }  
+  .answer{
+      padding: 2rem 0;
+      p{
+        padding: 1rem 0;
+      }
+    }  
+  }
+`
+
 
 export default FaqSection;
